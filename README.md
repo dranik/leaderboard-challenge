@@ -52,21 +52,7 @@ The server end-point should simulate a response that takes 1.5 seconds to comput
 Replace the current top shows with the server's response.  There is no need to compare if there any changes or not.
 It would be awesome if you could use `Class` feature of CoffeeScript to make your code namespaced and independent.
 
-### Result
-
-If all 3 steps are done properly, the app should work like this:
-
-1. going to `localhost:3000` in a browser presents the top 10 shows (immediately, without any delays from step 3)
-2. while keeping the browser open, that page will change the top 10 shows without any actions from user side (when the random number changes)
-
-That's it.
-
-Creating small meaningful commits along the way would be a plus, as is good inline documentation and verbose commit descriptions.
-You can share your work with us by sending your project tree to us by email in a compressed directory.
-
-Please, **don't send pull requests** to this repository.
-
-### Bonus task (optional)
+#### Step 4
 
 Use this markup:
 
@@ -98,6 +84,24 @@ To implement a button, which looks like this (screenshot is taken from retina di
 
 ![Button](https://bitbucket.org/repo/5rgedz/images/636949907-button.png)
 
-Only initial state is needed, ignore `hover`, `active`, `focus` and any other state. All gradients are linear.
-You must create and change `.button-container` and `.button` classes only.
-You must **not** change markup in any way.
+Only initial button state is required, ignore `hover`, `active`, `focus` or any other states. All gradients are linear.
+You must create `.button` class and you may change `.button-container` class, although keep in mind,
+`.button-container` purpose is solely for background color underneath the button, nothing more.
+You must **not** change markup or redefine Bootstrap classes in any way.
+
+The exact place for the button doesn't matter, just put it somewhere on the page with the top 10 shows.
+
+### Result
+
+If all 4 steps are done properly, the app should work like this:
+
+1. going to `localhost:3000` in a browser presents the top 10 shows (immediately, without any delays from step 3)
+2. while keeping the browser open, that page will change the top 10 shows without any actions from user side (when the random number changes)
+3. and somewhere on the page there is a styled "Test" button from step 4
+
+That's it.
+
+Creating small meaningful commits along the way would be a plus, as is good inline documentation and verbose commit descriptions.
+You can share your work with us by sending your project tree to us by email in a compressed directory.
+
+Please, **don't send pull requests** to this repository.
