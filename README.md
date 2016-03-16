@@ -87,7 +87,7 @@ $button-border-top-color: #ffbb00;
 $button-border-bottom-color: #a43820;
 ```
 
-To implement a button, which looks like this:
+To implement a button, which looks like this (screenshot is taken from retina display, so ignore the size, actual button should look around twice smaller):
 
 ![Button](https://bitbucket.org/repo/5rgedz/images/636949907-button.png)
 
