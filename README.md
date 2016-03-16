@@ -43,6 +43,7 @@ The schema consists of "shows" and "reviews". We've dropped corresponding models
 
 Change your query for the top 10 shows so that it will sort shows not by average score, but by (average score + random number from 0 to 100).
 The tricky part: the random number should be changed **once a minute**, not on every request, so within a given one-minute period the top stays static, but then it changes for every next-minute period.
+The random number should be different for every show, otherwise the top won't change.
 
 #### Step 3
 
@@ -64,3 +65,32 @@ Creating small meaningful commits along the way would be a plus, as is good inli
 You can share your work with us by sending your project tree to us by email in a compressed directory.
 
 Please, **don't send pull requests** to this repository.
+
+### Bonus task (optional)
+
+Use this markup:
+
+```html
+<div class="button-container">
+  <button class="btn btn-lg button">Test</button>
+</div>
+```
+
+And this SCSS variables:
+
+```scss
+$button-container-background: #eee;
+$button-text-color: #fff;
+$button-background-top: #07575b;
+$button-background-bottom: #66a5ad;
+$button-border-top-color: #ffbb00;
+$button-border-bottom-color: #a43820;
+```
+
+To implement a button, which looks like this:
+
+![Button](https://bitbucket.org/repo/5rgedz/images/636949907-button.png)
+
+Only initial state is needed, ignore `hover`, `active`, `focus` and any other state. All gradients are linear.
+You must create and change `.button-container` and `.button` classes only.
+You must **not** change markup in any way.
