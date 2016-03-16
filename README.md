@@ -76,7 +76,7 @@ Use this markup:
 </div>
 ```
 
-And this SCSS variables:
+And this SCSS:
 
 ```scss
 $button-container-background: #eee;
@@ -85,6 +85,13 @@ $button-background-top: #07575b;
 $button-background-bottom: #66a5ad;
 $button-border-top-color: #ffbb00;
 $button-border-bottom-color: #a43820;
+
+.button-container {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: $button-container-background;
+}
 ```
 
 To implement a button, which looks like this (screenshot is taken from retina display, so ignore the size, actual button should look around twice smaller):
