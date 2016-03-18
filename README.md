@@ -1,3 +1,5 @@
+!!! This is the updated version of the Show-Score coding evaluation.
+
 ## Leaderboard Challenge
 
 This is a bare-bones Rails app that we've put together to see how you think.
