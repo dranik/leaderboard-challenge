@@ -4,10 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    sleep 1.5
     @shows = Show.joins(:reviews)
                  .select('shows.id, shows.title, shows.description, shows.number, avg(reviews.score)')
                  .group('shows.id')
                  .order('avg(reviews.score)+shows.number desc')
                  .limit(10)
+    if params[:data_only]
+      render "index.json"
+    end
   end
+
 end
