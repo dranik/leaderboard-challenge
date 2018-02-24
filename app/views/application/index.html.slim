@@ -1,0 +1,18 @@
+.container
+  .row
+    .col-sm-12
+      table.table
+        thead
+          tr
+            th Title
+            th Description
+            th Score
+        tbody
+          - @shows.each do |show|
+            tr
+              td
+                = show.title
+              td
+                = show.description
+              td
+                = show.attributes["avg(reviews.score)"].round(2)

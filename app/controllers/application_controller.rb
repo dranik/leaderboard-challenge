@@ -4,5 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @shows = Show.joins(:reviews)
+                 .select('shows.id, shows.title, shows.description, avg(reviews.score)')
+                 .group('shows.id')
+                 .order('avg(reviews.score) desc')
+                 .limit(10)
   end
 end
