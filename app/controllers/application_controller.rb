@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   def index
     @shows = Show.joins(:reviews)
-                 .select('shows.id, shows.title, shows.description, avg(reviews.score)')
+                 .select('shows.id, shows.title, shows.description, shows.number, avg(reviews.score)')
                  .group('shows.id')
-                 .order('avg(reviews.score) desc')
+                 .order('avg(reviews.score)+shows.number desc')
                  .limit(10)
   end
 end

@@ -15,4 +15,4 @@
               td
                 = show.description
               td
-                = show.attributes["avg(reviews.score)"].round(2)
+                = (show.attributes["avg(reviews.score)"] + show.number).round(2)

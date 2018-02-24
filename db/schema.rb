@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515002816) do
+ActiveRecord::Schema.define(version: 20180224173404) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "show_id"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(version: 20150515002816) do
   add_index "reviews", ["show_id"], name: "index_reviews_on_show_id"
 
   create_table "shows", force: :cascade do |t|
-    t.string "title"
-    t.text   "description"
+    t.string  "title"
+    t.text    "description"
+    t.integer "number"
   end
 
 end
