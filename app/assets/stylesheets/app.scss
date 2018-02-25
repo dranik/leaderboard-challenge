@@ -1,0 +1,54 @@
+$button-container-background: #eee;
+$button-text-color: #fff;
+$button-background-top: #07575b;
+$button-background-bottom: #66a5ad;
+$button-border-top-color: #ffbb00;
+$button-border-bottom-color: #a43820;
+$button-border-radius: 13px;
+
+.button-container {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: $button-container-background;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  background: transparent;
+  border-radius: $button-border-radius;
+  color: $button-text-color;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  padding: 17px 35px;
+}
+
+button:before,
+button:after {
+  content: ' ';
+  position: absolute;
+  border-radius: $button-border-radius;
+}
+
+button:before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background: #503b9a;
+  background: linear-gradient(to bottom, $button-border-top-color,$button-border-bottom-color);
+}
+
+button:after {
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background: linear-gradient($button-background-top, $button-background-bottom);
+  z-index: -1;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+}

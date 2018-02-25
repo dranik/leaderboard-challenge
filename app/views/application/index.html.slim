@@ -16,3 +16,6 @@
                 = show.description
               td
                 = (show.attributes["avg(reviews.score)"] + show.number).round(2)
+  .row
+    .col-md-12
+      = render "test_button"
